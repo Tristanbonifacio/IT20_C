@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open this template in the editor.
+ */
 
 package topic_3_stack;
 
@@ -8,8 +12,8 @@ package topic_3_stack;
  * @author HP
  */
 public class Stack {
-    private int maxSize;
-    private int[] stackArray;
+    private final int maxSize;
+    private final int[] stackArray;
     private int top;
 
     // Constructor to initialize the stack with a specified size
@@ -61,3 +65,4 @@ public class Stack {
         return stackArray[top--];
     }
 }
+
