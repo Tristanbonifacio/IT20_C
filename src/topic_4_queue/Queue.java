@@ -19,6 +19,7 @@ public class Queue {
         customers.addLast(customer);
         System.out.println(customer.getName() + " has been added to the queue.");
     }
+<<<<<<< HEAD
     public void displayQueue() {
         if (isEmpty()) {
             System.out.println("The queue is currently empty.");
@@ -43,3 +44,6 @@ public class Queue {
     }
     
 }
+=======
+    
+>>>>>>> 573dfc5c2f2d6acca205e8e3a84bf9eaf627fa6d
