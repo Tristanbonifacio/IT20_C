@@ -1,10 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open this template in the editor.
+ */
 
 package topic_3_stack;
 
-
+/**
+ * Stack implementation using an array.
+ * 
+ * @author HP
+ */
 public class Stack {
-    private final int maxSize;
-    private final int[] stackArray;
+    private int maxSize;
+    private int[] stackArray;
     private int top;
 
     // Constructor to initialize the stack with a specified size
@@ -16,12 +25,12 @@ public class Stack {
 
     // Check if the stack is empty
     public boolean isEmpty() {
-        return (top == -1);
+        return top == -1;
     }
 
     // Check if the stack is full
     public boolean isFull() {
-        return (top == maxSize - 1);
+        return top == maxSize - 1;
     }
 
     // Get the current size of the stack
@@ -29,17 +38,16 @@ public class Stack {
         return top + 1;
     }
 
-    // Push a value onto the stack
+    // Add an element to the top of the stack
     public void push(int value) {
         if (isFull()) {
             System.out.println("Stack is full. Cannot push " + value);
             return;
         }
         stackArray[++top] = value;
-        System.out.println("Pushed " + value + " onto the stack.");
     }
 
-    // Peek at the top value of the stack
+    // Get the top element without removing it
     public int peek() {
         if (isEmpty()) {
             System.out.println("Stack is empty. Cannot peek.");
@@ -48,14 +56,13 @@ public class Stack {
         return stackArray[top];
     }
 
-    // Pop the top value off the stack
+    // Remove and return the top element of the stack
     public int pop() {
         if (isEmpty()) {
             System.out.println("Stack is empty. Cannot pop.");
             return -1;
         }
-        int poppedValue = stackArray[top--];
-        System.out.println("Popped " + poppedValue + " from the stack.");
-        return poppedValue;
+        return stackArray[top--];
     }
 }
+

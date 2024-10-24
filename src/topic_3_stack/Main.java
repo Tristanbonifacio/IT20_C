@@ -3,14 +3,14 @@ package topic_3_stack;
 import java.util.Scanner;
 
 /**
- * Main class to demonstrate stack operations.
+ * Main class for Stack operations
  */
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Stack stack = new Stack(5);
 
-        System.out.println("Welcome to the Stack Program!");
+        System.out.println("Hello there!");
 
         while (true) {
             System.out.println("Choose an option: "
@@ -18,15 +18,15 @@ public class Main {
                     + "\n2. Push"
                     + "\n3. Pop"
                     + "\n4. Exit");
-            int choice = sc.nextInt();
 
+            int choice = sc.nextInt();
             switch (choice) {
                 case 1:
                     System.out.println("Stack size is: " + stack.size());
                     break;
 
                 case 2:
-                    System.out.print("Enter a number to push: ");
+                    System.out.print("Add a number: ");
                     int num = sc.nextInt();
                     stack.push(num);
                     System.out.println("Pushed value: " + num);
@@ -41,7 +41,7 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.println(" Come back to run it again!");
+                    System.out.println("Thank you! Come back and run it again!");
                     sc.close();
                     System.exit(0);
                     break;
