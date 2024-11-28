@@ -1,12 +1,20 @@
 package topic_4_queue;
+
 import java.util.LinkedList;
 
+/**
+ * A simple implementation of a queue for Customer objects.
+ * 
+ * @author HP
+ */
 public class Queue {
-	private LinkedList<Customer> customers;
+    
+    private final LinkedList<Customer> customers;
 
     public Queue() {
         customers = new LinkedList<>();
     }
+    
     public boolean isEmpty() {
         return customers.isEmpty();
     }
@@ -19,14 +27,15 @@ public class Queue {
         customers.addLast(customer);
         System.out.println(customer.getName() + " has been added to the queue.");
     }
+    
     public void displayQueue() {
         if (isEmpty()) {
             System.out.println("The queue is currently empty.");
-        } else {
+        } else {            
             System.out.print("Current queue: ");
-            for (Customer customer : customers) {
+            customers.forEach((customer) -> {
                 System.out.print(customer.getName() + " | ");
-            }
+            });
             System.out.println();
         }
     }
@@ -42,4 +51,12 @@ public class Queue {
         }
     }
     
+    public Customer peek() {
+        if (!isEmpty()) {
+            return customers.getFirst();
+        } else {
+            System.out.println("The queue is empty.");
+            return null;
+        }
+    }
 }

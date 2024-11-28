@@ -1,13 +1,19 @@
 package topic_4_queue;
 
+/**
+ *
+ * @author nyl
+ */
 public class Customer {
-	private String name;
+    private String customerName;
 
-    public Customer(String name) {
-        this.name = name;
+    // Constructor
+    public Customer(String customerName) {
+        this.customerName = customerName;
     }
 
+    // Getter method
     public String getName() {
-        return name;
+        return customerName;
     }
 }
