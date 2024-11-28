@@ -2,7 +2,7 @@ package topic_4_queue;
 import java.util.LinkedList;
 
 public class Queue {
-	private LinkedList<Customer> customers;
+	private final LinkedList<Customer> customers;
 
     public Queue() {
         customers = new LinkedList<>();
@@ -19,15 +19,15 @@ public class Queue {
         customers.addLast(customer);
         System.out.println(customer.getName() + " has been added to the queue.");
     }
-<<<<<<< HEAD
+
     public void displayQueue() {
         if (isEmpty()) {
             System.out.println("The queue is currently empty.");
         } else {
             System.out.print("Current queue: ");
-            for (Customer customer : customers) {
+            customers.forEach((customer) -> {
                 System.out.print(customer.getName() + " | ");
-            }
+            });
             System.out.println();
         }
     }
@@ -44,6 +44,3 @@ public class Queue {
     }
     
 }
-=======
-    
->>>>>>> 573dfc5c2f2d6acca205e8e3a84bf9eaf627fa6d
