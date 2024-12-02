@@ -20,4 +20,8 @@ public class Node {
         this.data = data;
         this.next = null;
     }
+
+    public Node(String data) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
